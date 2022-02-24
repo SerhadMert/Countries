@@ -40,13 +40,10 @@ fun Dialog.showWithAttrs(activity: Activity) {
         display.getMetrics(displayMetrics)
     }
     val width = displayMetrics.widthPixels
-    val height = displayMetrics.heightPixels
     val layoutParams = WindowManager.LayoutParams()
     layoutParams.copyFrom(this.window?.attributes)
     val dialogWidth = (width * 0.9f).toInt()
-    val dialogHeight = (height * 0.4f).toInt()
     layoutParams.width = dialogWidth
-    layoutParams.height = dialogHeight
     this.window?.attributes = layoutParams
 }
 

@@ -15,10 +15,8 @@ class InternetServiceReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         if (!InternetServiceManager.isOnline(context)) {
             showDialog(context)
-            Log.v("myDialog","myDialog")
         } else {
             hideDialog()
-            Log.v("myDialog","myDialog")
         }
     }
 

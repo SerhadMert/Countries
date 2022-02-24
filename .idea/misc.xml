@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/dialog_bg.xml" value="0.264" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.205" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_launcher_background.xml" value="0.264" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_placeholder_background.xml" value="0.205" />
