@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.countries.utils.gone
 import com.example.countries.utils.show

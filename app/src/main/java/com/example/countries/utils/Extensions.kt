@@ -6,12 +6,17 @@ import android.os.Build
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 
 fun View.show() {
     visibility = View.VISIBLE
 }
 fun View.gone() {
     visibility = View.GONE
+}
+fun Fragment.setActionBarTitle(string: String){
+    (requireActivity() as AppCompatActivity).supportActionBar?.title = string
 }
 fun Dialog.showWithAttrs(activity: Activity) {
     this.show()

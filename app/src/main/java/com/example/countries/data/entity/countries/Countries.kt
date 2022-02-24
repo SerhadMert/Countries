@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Countries(
     @SerializedName("data")
-    val `data`: List<Data>?,
+    val `data`: List<CountriesData>?,
     @SerializedName("links")
     val links: List<Link>?,
     @SerializedName("metadata")
