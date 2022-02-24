@@ -5,4 +5,7 @@
     <string name="favorites">Favorites</string>
     <string name="home">Home</string>
     <string name="favoriteImage">favoriteImage</string>
+    <string name="country_image">Country Image</string>
+    <string name="country_code">Country Code :</string>
+    <string name="for_more_information">For More Information -></string>
 </resources>
