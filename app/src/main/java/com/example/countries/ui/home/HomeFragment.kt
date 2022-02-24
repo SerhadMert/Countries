@@ -9,6 +9,7 @@ import com.example.countries.base.BaseFragment
 import com.example.countries.databinding.FragmentHomeBinding
 import com.example.countries.utils.Resource
 import com.example.countries.utils.setActionBarTitle
+import com.example.countries.utils.showDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,7 +33,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             when (response.status) {
                 Resource.Status.LOADING -> {
                     showLoading()
-                    Log.d("CountriesList", "Loading")
                 }
                 Resource.Status.SUCCESS -> {
                     hideLoading()
@@ -40,7 +40,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                 }
                 Resource.Status.ERROR -> {
                     hideLoading()
-                    Log.d("CountriesList", "${response.message}")
+                    showDialog(requireContext(), message = "${response.message}")
                 }
             }
         }
