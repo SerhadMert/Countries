@@ -10,7 +10,7 @@ class Repository @Inject constructor(private var remoteDataSource: RemoteDataSou
         remoteDataSource.getCountries()
     }
 
-    fun getMovieByImdbId(code: String) = performNetworkOperation {
+    fun getCountryDetailBCode(code: String) = performNetworkOperation {
         remoteDataSource.getCountryDetailByCode(code)
     }
 }
