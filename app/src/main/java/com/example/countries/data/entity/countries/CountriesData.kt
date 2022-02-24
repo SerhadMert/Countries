@@ -3,7 +3,7 @@ package com.example.countries.data.entity.countries
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class CountriesData(
     @SerializedName("code")
     val code: String?,
     @SerializedName("currencyCodes")
