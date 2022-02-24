@@ -3,8 +3,10 @@ package com.example.countries.ui.home
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.countries.R
 import com.example.countries.data.entity.countries.CountriesData
 import com.example.countries.databinding.ItemCountriesBinding
 
@@ -25,9 +27,21 @@ class CountryListAdapter :
         val country = list[position]
         countryName.text = country.name
         root.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(country.code)
-            it.findNavController().navigate(action)
+            val action = country.code?.let { safeCode ->
+                country.name?.let { safeName ->
+                    HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+                        safeCode, safeName
+                    )
+                }
+            }
+            if (action != null) {
+                it.findNavController().navigate(action)
+            }
         }
+        root.animation = AnimationUtils.loadAnimation(
+            root.context,
+            R.anim.fade_transition_vertical
+        )
     }
 
     override fun getItemCount() = list.size
