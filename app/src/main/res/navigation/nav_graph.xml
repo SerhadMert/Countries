@@ -34,5 +34,17 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_detailWebViewFragment"
+            app:destination="@id/detailWebViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailWebViewFragment"
+        android:name="com.example.countries.ui.detail.DetailWebViewFragment"
+        android:label="fragment_detail_web_view"
+        tools:layout="@layout/fragment_detail_web_view" >
+        <argument
+            android:name="url"
+            app:argType="string" />
     </fragment>
 </navigation>
