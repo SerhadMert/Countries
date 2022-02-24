@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Countries</string>
+    <string name="no_conn_message">Lütfen İnternet Bağlantınızı Kontrol Edin</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+</resources>
