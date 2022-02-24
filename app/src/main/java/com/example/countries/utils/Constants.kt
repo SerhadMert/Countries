@@ -8,4 +8,5 @@ object Constants {
     const val END_POINT_COUNTRIES = "geo/countries"
     const val END_POINT_COUNTRY_DETAIL = "geo/countries/{code}"
     const val LIMIT = 10
+    const val WIKIDATA_URL = "https://www.wikidata.org/wiki/"
 }
