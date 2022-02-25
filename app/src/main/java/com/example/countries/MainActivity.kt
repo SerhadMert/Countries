@@ -1,40 +1,34 @@
 package com.example.countries
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.example.countries.databinding.ActivityMainBinding
 import com.example.countries.utils.gone
 import com.example.countries.utils.show
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var navController: NavController
-    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
-        navController = Navigation.findNavController(this, R.id.fragmentContainerView)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
 
-        NavigationUI.setupWithNavController(bottomNavigationView, navController)
+        binding.bottomNavigationView.setupWithNavController(navController)
     }
 
     fun hideNavigationBar() {
-        bottomNavigationView.gone()
+        binding.bottomNavigationView.gone()
     }
 
     fun showNavigationBar() {
-        bottomNavigationView.show()
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(navController, null)
+        binding.bottomNavigationView.show()
     }
 }

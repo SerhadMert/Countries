@@ -69,14 +69,13 @@ fun ImageView.loadSvg(url: String?) {
         .setPlaceHolder(R.drawable.ic_baseline_image_24, R.drawable.ic_baseline_image_24)
         .load(Uri.parse(url), this)
 }
-
 /**
  * flagImageUri returns http request, but when you click the url it opens with https
  * I can't check all the urls so i'm using a safeCall
  */
 fun convert(string: String): String {
     var newString = string
-    if (string.contains("http:")) {
+    if (string.startsWith("http:")) {
         newString = string.replace("http", "https")
     }
     return newString

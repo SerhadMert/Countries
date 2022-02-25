@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
@@ -24,7 +24,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:itemIconTint="@drawable/selector_navigation_button"
         app:menu="@menu/bottom_navigation" />
-
-
 
 </LinearLayout>
