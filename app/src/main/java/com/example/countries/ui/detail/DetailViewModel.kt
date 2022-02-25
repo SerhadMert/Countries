@@ -13,4 +13,6 @@ class DetailViewModel @Inject constructor(private val repository: Repository): V
     fun getCountryDetailByCode(code:String) : LiveData<Resource<CountryDetail>>{
         return repository.getCountryDetailBCode(code)
     }
+
+    fun getFavorites() = repository.getFavorites()
 }

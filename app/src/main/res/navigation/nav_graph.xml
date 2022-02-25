@@ -22,21 +22,22 @@
         android:id="@+id/favoritesFragment"
         android:name="com.example.countries.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.countries.ui.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
-        <argument
-            android:name="code"
-            app:argType="string" />
-        <argument
-            android:name="name"
-            app:argType="string" />
         <action
             android:id="@+id/action_detailFragment_to_detailWebViewFragment"
             app:destination="@id/detailWebViewFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.countries.data.entity.countries.CountriesData" />
     </fragment>
     <fragment
         android:id="@+id/detailWebViewFragment"

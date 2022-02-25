@@ -1,15 +1,24 @@
 package com.example.countries.data.entity.countries
 
 
+import android.os.Parcelable
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Entity(tableName = "countries")
+@Parcelize
 data class CountriesData(
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("code")
-    val code: String?,
+    @ColumnInfo val code: String,
     @SerializedName("currencyCodes")
-    val currencyCodes: List<String>?,
+    @ColumnInfo val currencyCodes: List<String>?,
     @SerializedName("name")
-    val name: String?,
+    @ColumnInfo val name: String?,
     @SerializedName("wikiDataId")
-    val wikiDataId: String?
-)
+    @ColumnInfo val wikiDataId: String?,
+    @ColumnInfo var isFavorite: Boolean = false
+):Parcelable
