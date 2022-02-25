@@ -1,5 +1,6 @@
 package com.example.countries.ui.favorites
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
@@ -9,9 +10,9 @@ import com.example.countries.R
 import com.example.countries.data.entity.countries.CountriesData
 import com.example.countries.databinding.ItemCountriesBinding
 
-class FavoritesListAdapter : RecyclerView.Adapter<FavoritesListAdapter.FavoritesViewHolder>() {
+class FavoritesListAdapter(private var listener: IFavoriteItem? = null) : RecyclerView.Adapter<FavoritesListAdapter.FavoritesViewHolder>() {
 
-    private var list = emptyList<CountriesData>()
+    private var favoriteList = emptyList<CountriesData>()
 
     inner class FavoritesViewHolder(val binding: ItemCountriesBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -24,8 +25,9 @@ class FavoritesListAdapter : RecyclerView.Adapter<FavoritesListAdapter.Favorites
 
     override fun onBindViewHolder(holder: FavoritesViewHolder, position: Int) =
         with(holder.binding) {
-            val favorite = list[position]
+            val favorite = favoriteList[position]
             tvCountryName.text = favorite.name
+            imgFavorite.setImageResource(R.drawable.ic_baseline_favorite_24)
             root.setOnClickListener {
                 val action = FavoritesFragmentDirections.actionFavoritesFragmentToDetailFragment(
                     favorite
@@ -38,5 +40,17 @@ class FavoritesListAdapter : RecyclerView.Adapter<FavoritesListAdapter.Favorites
             )
         }
 
-    override fun getItemCount() = list.size
+    override fun getItemCount() = favoriteList.size
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(newList: List<CountriesData>){
+        favoriteList = newList
+        notifyDataSetChanged()
+    }
+
+    fun unFavorite(position: Int) {
+        listener?.let {
+            listener?.favoriteItem(favoriteList[position], position)
+        }
+    }
 }
