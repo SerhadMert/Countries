@@ -49,15 +49,14 @@ class CountryListAdapter(private var listener: IFavoriteItem? = null) :
             }
         }
 
-    fun checkFavorite(isFavorite: Boolean): Int {
+    private fun checkFavorite(isFavorite: Boolean): Int {
         return when (isFavorite) {
             true -> R.drawable.ic_baseline_favorite_24
-
             false -> R.drawable.ic_baseline_favorite_border_24
         }
     }
 
-    fun changeFavoriteImage(favorite: ImageView, resource: Int) {
+    private fun changeFavoriteImage(favorite: ImageView, resource: Int) {
         favorite.setImageResource(resource)
     }
 
