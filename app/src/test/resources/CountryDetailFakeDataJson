@@ -1,0 +1,14 @@
+{
+  "data": {
+    "capital": "Addis Ababa",
+    "code": "ET",
+    "callingCode": "+251",
+    "currencyCodes": [
+      "ETB"
+    ],
+    "flagImageUri": "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Ethiopia.svg",
+    "name": "Ethiopia",
+    "numRegions": 11,
+    "wikiDataId": "Q115"
+  }
+}
