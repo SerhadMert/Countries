@@ -8,9 +8,11 @@
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_baseline_delete_outline_24.xml" value="0.264" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.264" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.205" />
+        <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1815" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_launcher_background.xml" value="0.264" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_placeholder_background.xml" value="0.205" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/ic_signal_wifi_off_black.xml" value="0.205" />
+        <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/selector.xml" value="0.1815" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/drawable/selector_navigation_button.xml" value="0.205" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/layout/activity_main.xml" value="0.276268115942029" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/layout/dialog_no_connection.xml" value="0.276268115942029" />
@@ -25,6 +27,7 @@
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/menu/action_bar.xml" value="0.371875" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/menu/bottom_navigation.xml" value="0.371875" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/menu/custom_toolbar.xml" value="2.55" />
+        <entry key="..\:/AndroidApps/Countries/app/src/main/res/menu/navigation.xml" value="0.371875" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/mipmap-anydpi-v26/ic_placeholder.xml" value="0.264" />
         <entry key="..\:/AndroidApps/Countries/app/src/main/res/xml/network_security_config.xml" value="0.18085106382978725" />
       </map>

@@ -1,7 +1,6 @@
 package com.example.countries.ui.favorites
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.countries.data.entity.countries.CountriesData
 import com.example.countries.data.repository.Repository

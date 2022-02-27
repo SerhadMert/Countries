@@ -1,7 +1,6 @@
 package com.example.countries.data.local
 
 import com.example.countries.data.entity.countries.CountriesData
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class LocalDataSource @Inject constructor(private val favoritesDao: FavoritesDao) {

@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
-            android:text="Bağlantı Hatası"
+            android:text="@string/connection_error"
             android:textColor="@color/amaranth"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -68,7 +68,7 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="Devam Et"
+            android:text="@string/continue_to_process"
             android:textColor="@android:color/white"
             app:cornerRadius="0dp" />
 
