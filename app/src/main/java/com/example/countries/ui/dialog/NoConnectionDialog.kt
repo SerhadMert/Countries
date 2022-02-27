@@ -3,11 +3,8 @@ package com.example.countries.ui.dialog
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Window
-import com.example.countries.R
 import com.example.countries.databinding.DialogNoConnectionBinding
 
 @SuppressLint("ResourceType")

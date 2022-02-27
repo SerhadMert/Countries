@@ -2,7 +2,6 @@ package com.example.countries.ui.detail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.countries.data.entity.countries.CountriesData
 import com.example.countries.data.entity.countrydetail.CountryDetail

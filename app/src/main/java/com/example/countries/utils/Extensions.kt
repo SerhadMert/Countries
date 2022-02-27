@@ -10,17 +10,11 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.example.countries.R
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 
 fun View.show() {
     visibility = View.VISIBLE
-}
-
-fun View.hide() {
-    visibility = View.INVISIBLE
 }
 
 fun View.gone() {
@@ -71,7 +65,8 @@ fun ImageView.loadSvg(url: String?) {
 }
 /**
  * flagImageUri returns http request, but when you click the url it opens with https
- * I can't check all the urls so i'm using a safeCall
+ * At first I tried to fix it from manifest but it didn't work so i change the url
+ * I couldn't check all the urls so i'm using a safeCall
  */
 fun convert(string: String): String {
     var newString = string

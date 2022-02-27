@@ -26,7 +26,7 @@ class DetailWebViewFragment : BaseFragment<FragmentDetailWebViewBinding>(Fragmen
         args.url.let {
             binding.webViewDetail.loadUrl(it)
         }
-        binding.backButtonWebView.setOnClickListener { findNavController().popBackStack() }
+        binding.btnBackWebView.setOnClickListener { findNavController().popBackStack() }
     }
 
     inner class WebViewClient : android.webkit.WebViewClient() {

@@ -18,7 +18,7 @@
             android:id="@+id/tvCountryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             tools:text="Country"
             app:layout_constraintStart_toStartOf="parent"

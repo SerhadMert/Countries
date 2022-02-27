@@ -20,9 +20,8 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:itemIconTint="@drawable/selector_navigation_button"
-        app:menu="@menu/bottom_navigation" />
+        app:menu="@menu/bottom_navigation"/>
 
 </LinearLayout>

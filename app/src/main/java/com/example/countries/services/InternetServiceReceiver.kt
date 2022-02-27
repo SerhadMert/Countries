@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import com.example.countries.ui.dialog.NoConnectionDialog
 import com.example.countries.utils.showWithAttrs
 

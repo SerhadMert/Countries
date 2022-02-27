@@ -7,7 +7,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.countries.R
 import com.example.countries.base.BaseFragment
-import com.example.countries.data.entity.countrydetail.Data
+import com.example.countries.data.entity.countrydetail.CountryDetailData
 import com.example.countries.databinding.FragmentDetailBinding
 import com.example.countries.utils.*
 import dagger.hilt.android.AndroidEntryPoint
@@ -48,7 +48,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
         }
     }
 
-    private fun setData(data: Data?) = with(binding) {
+    private fun setData(data: CountryDetailData?) = with(binding) {
         tvCountryCode.text = data?.code
         imgCountry.loadSvg(convert(data?.flagImageUri ?: ""))
         url = "${Constants.WIKIDATA_URL}${data?.wikiDataId}"
@@ -73,7 +73,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding
         }
     }
     private fun setCountryName(){
-        binding.textCountryName.text = args.currentItem.name
+        binding.tvCountryName.text = args.currentItem.name
     }
 
     private fun setFavoriteButton() = with(binding){

@@ -10,4 +10,6 @@
     <string name="favorite">favorite</string>
     <string name="back">back</string>
     <string name="button_back">Button Back</string>
+    <string name="continue_to_process">CONTINUE</string>
+    <string name="connection_error">Connection Error</string>
 </resources>
