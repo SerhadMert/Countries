@@ -19,12 +19,12 @@ fun View.show() {
     visibility = View.VISIBLE
 }
 
-fun View.gone() {
-    visibility = View.GONE
+fun View.hide() {
+    visibility = View.INVISIBLE
 }
 
-fun Fragment.setActionBarTitle(string: String) {
-    (requireActivity() as AppCompatActivity).supportActionBar?.title = string
+fun View.gone() {
+    visibility = View.GONE
 }
 
 fun Dialog.showWithAttrs(activity: Activity) {

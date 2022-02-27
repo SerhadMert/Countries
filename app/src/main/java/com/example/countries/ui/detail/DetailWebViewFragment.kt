@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.countries.base.BaseFragment
 import com.example.countries.databinding.FragmentDetailWebViewBinding
@@ -25,6 +26,7 @@ class DetailWebViewFragment : BaseFragment<FragmentDetailWebViewBinding>(Fragmen
         args.url.let {
             binding.webViewDetail.loadUrl(it)
         }
+        binding.backButtonWebView.setOnClickListener { findNavController().popBackStack() }
     }
 
     inner class WebViewClient : android.webkit.WebViewClient() {
@@ -43,4 +45,6 @@ class DetailWebViewFragment : BaseFragment<FragmentDetailWebViewBinding>(Fragmen
             hideLoading()
         }
     }
+
+    override fun isNavigationBarVisible() = false
 }

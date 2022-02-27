@@ -1,6 +1,7 @@
 package com.example.countries.data.local
 
 import com.example.countries.data.entity.countries.CountriesData
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class LocalDataSource @Inject constructor(private val favoritesDao: FavoritesDao) {
@@ -9,11 +10,11 @@ class LocalDataSource @Inject constructor(private val favoritesDao: FavoritesDao
         return favoritesDao.getFavorites()
     }
 
-    fun addToFavorites(countries: CountriesData){
+    suspend fun addToFavorites(countries: CountriesData){
         favoritesDao.addToFavorites(countries)
     }
 
-    fun deleteFromFavorites(countries: CountriesData){
+    suspend fun deleteFromFavorites(countries: CountriesData){
         favoritesDao.deleteFromFavorites(countries)
     }
 }

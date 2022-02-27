@@ -11,8 +11,8 @@ class Repository @Inject constructor(
     private val localDataSource: LocalDataSource
 ) {
 
-    fun getCountries() = performNetworkOperation {
-        remoteDataSource.getCountries()
+    fun getCountries(offset:Int) = performNetworkOperation {
+        remoteDataSource.getCountries(offset)
     }
 
     fun getCountryDetailBCode(code: String) = performNetworkOperation {
@@ -21,7 +21,7 @@ class Repository @Inject constructor(
 
     fun getFavorites() = localDataSource.getFavorites()
 
-    fun addToFavorites(countries: CountriesData) = localDataSource.addToFavorites(countries)
+    suspend fun addToFavorites(countries: CountriesData) = localDataSource.addToFavorites(countries)
 
-    fun deleteFromFavorites(countries: CountriesData) = localDataSource.deleteFromFavorites(countries)
+    suspend fun deleteFromFavorites(countries: CountriesData) = localDataSource.deleteFromFavorites(countries)
 }
